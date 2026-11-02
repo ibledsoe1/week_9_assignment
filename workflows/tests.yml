@@ -1,1 +1,15 @@
 
+name: Run Tests  # Workflow
+
+on: [push]   # Event
+
+jobs:  # Job
+  test:
+    runs-on: ubuntu-latest  # Runner
+    steps:  # Steps
+      - uses: actions/checkout@v4  # Action
+      - uses: actions/setup-python@v5  # Action
+        with: 
+          python-version: "3.11"
+      - run: pip install pytest  # Step
+      - run: pytest  # Step
