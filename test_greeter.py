@@ -1,7 +1,7 @@
 from greeter import greet
 
 def test_greet_with_name():
-    assert greet("Izzy") == "Hello, Ada!"
+    assert greet("Ada") == "Hello, Ada!"
 
 def test_greet_with_empty_string():
     assert greet("") == "Hello, stranger!"
