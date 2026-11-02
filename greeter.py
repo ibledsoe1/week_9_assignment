@@ -13,4 +13,5 @@ def greet(name):
 
 
 def greet_all(names):
-    return f"Hello, {", ".join(names)}!"
+    joinedNames = ", ".join(names)
+    return f"Hello, {joinedNames}!"
