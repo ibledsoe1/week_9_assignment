@@ -10,3 +10,7 @@ def greet(name):
     if not name:
         return "Hello, stranger!"
     return f"Hello, {name}!"
+
+
+def greet_all(names):
+    return f"Hello, {", ".join(names)}!"
