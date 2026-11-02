@@ -6,10 +6,13 @@ on: [push]   # Event
 jobs:  # Job
   test:
     runs-on: ubuntu-latest  # Runner
+    strategy:
+      matrix:
+        python-version: ["3.11","3.12"]
     steps:  # Steps
       - uses: actions/checkout@v4  # Action
       - uses: actions/setup-python@v5  # Action
         with: 
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
       - run: pip install pytest  # Step
       - run: pytest  # Step
